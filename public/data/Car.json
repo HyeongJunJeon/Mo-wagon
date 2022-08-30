@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "gwagon",
+    "specification": [
+      {
+        "엔진형식": "I6",
+        "과급방식": "트윈터보",
+        "배기량": "2925cc",
+        "연료": "디젤",
+        "최고출력": "330hp",
+        "최대토크": "71.4kg.m",
+        "최고속도": "210km/h",
+        "가속성능": "6.4초",
+        "연비": "8.4kmg/l",
+        "CO 배출량": "233g/km"
+      }
+    ],
+    "image": [
+      {
+        "image_id": 1,
+        "imgge_url": "https://images.unsplash.com/photo-1610192804837-fb021b82b54c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGdjbGFzc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+      },
+      {
+        "image_id": 2,
+        "image_url": "https://images.unsplash.com/photo-1569240651611-302c9897bde5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Z2NsYXNzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
+      },
+      {
+        "image_id": 3,
+        "image_url": "https://images.unsplash.com/photo-1629020607902-3a93e9f8c4b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Z2NsYXNzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "mohave",
+    "specification": [
+      {
+        "엔진형식": "V6",
+        "과급방식": "싱글터보",
+        "배기량": "2959cc",
+        "연료": "디젤",
+        "최고출력": "257hp",
+        "최대토크": "57.1kg.m",
+        "구동방식": "풀타임 4륜구동",
+        "변속기": "자동 8단",
+        "연비": "9.3kmg/l",
+        "CO 배출량": "211~212g/km"
+      }
+    ],
+    "image": [
+      {
+        "image_id": 1,
+        "imgge_url": "https://images.unsplash.com/photo-1651041943612-def8fe2b1d93?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8a2lhJTIwbW9oYXZlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
+      },
+      {
+        "image_id": 2,
+        "image_url": "https://images.unsplash.com/photo-1651477213590-6fe6fedad732?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8a2lhJTIwbW9oYXZlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
+      },
+      {
+        "image_id": 3,
+        "image_url": "https://images.unsplash.com/photo-1579377090611-3adf9bbdba07?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGtpYSUyMG1vaGF2ZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
+      }
+    ]
+  }
+]
