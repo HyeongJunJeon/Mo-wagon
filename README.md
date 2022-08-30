@@ -13,4 +13,4 @@ redux, typeScript, next.js와 node.js, express, mongoDB 적용예정입니다.
 
 1. keyframe을 활용하여 메인 Image의 동적 구성, 메뉴의 dropdown형식의 에니메이션을 구성하였습니다. 
 2. react-player를 사용하여 youtube영상을 삽입했습니다.
-3. navBar는 position: fixed를 활용하여, viewport상단에 고정하였습니다.
+3. navBar는 position: fixed를 활용하여, 스크롤시 viewport상단에 고정하였습니다.
