@@ -10,8 +10,8 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: 'Noto Sans KR', sans-serif;
-    background-color: #000000;
-    color: #FFFFFF;
+    /* background-color: #000000;
+    color: #FFFFFF; */
   }
 
   button {
