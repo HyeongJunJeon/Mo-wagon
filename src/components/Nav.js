@@ -1,17 +1,20 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
 import Icon from "../img/benz.png";
+import { useNavigate } from "react-router";
 
 const Nav = () => {
+  const navigate = useNavigate();
+
   return (
     <Container>
       <BenzIcon src={Icon} alt="Icon"></BenzIcon>
       <ContentBox>
-        <li>HOME</li>
+        <li onClick={() => navigate("/")}>HOME</li>
         <Item>
           G-WAGON
           <ul>
-            <li>제원</li>
+            <li onClick={() => navigate("/specification")}>제원</li>
             <li>가격</li>
           </ul>
         </Item>

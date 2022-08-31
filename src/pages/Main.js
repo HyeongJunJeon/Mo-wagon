@@ -27,12 +27,12 @@ const Main = () => {
       </TitlePart>
 
       <div>
-        <Title>시대가 변해도 변하지 않는 DNA.</Title>
-        <Text>
+        <HighlightCaption>시대가 변해도 변하지 않는 DNA.</HighlightCaption>
+        <HighlightText>
           독특한 디자인의 도어 손잡이부터 문이 닫힐 때의 소리, 테일게이트의
           스페어 휠에 이르기까지. 40년 동안 변함없이 이어온 The G-Class만의
           DNA는 The G-Class를 더욱 가치 있게 만들어줍니다.
-        </Text>
+        </HighlightText>
 
         <div style={{ marginTop: "50px" }}>
           <ReactPlayer
@@ -45,12 +45,12 @@ const Main = () => {
           />
         </div>
 
-        <Title>변하지 않는 자신감 MOHAVE.</Title>
-        <Text>
+        <HighlightCaption>변하지 않는 자신감 MOHAVE.</HighlightCaption>
+        <HighlightText>
           블랙 컬러 고유의 정제된 프리미엄 그래비티, 존재감을 드러내는 선이 굵고
           기품있는 디자인, 와이드한 레이아웃과 고급스러운 디테일, 프리미엄
           드라이빙 스페이스, 파워풀하고 민첩한 주행 성능을 제공합니다.
-        </Text>
+        </HighlightText>
 
         <div style={{ marginTop: "50px" }}>
           <ReactPlayer
@@ -65,8 +65,10 @@ const Main = () => {
       </div>
 
       <div>
-        <Title>시승 및 구매상담</Title>
-        <Text>시승 스케줄 확정 및 상담을 위해 컨설턴트가 연락을 드립니다.</Text>
+        <HighlightCaption>시승 및 구매상담</HighlightCaption>
+        <HighlightText>
+          시승 스케줄 확정 및 상담을 위해 컨설턴트가 연락을 드립니다.
+        </HighlightText>
 
         <CardContainer>
           {CONTACT_TAB.map((item) => (
@@ -150,14 +152,14 @@ const TitleText = styled.p`
   opacity: 0;
 `;
 
-const Title = styled.span`
+const HighlightCaption = styled.span`
   display: inline-block;
   margin-top: 50px;
   border-bottom: 3px solid ${(props) => props.theme.border};
   font-size: 32px;
 `;
 
-const Text = styled.p`
+const HighlightText = styled.p`
   margin-top: 30px;
   font-size: 16px;
 `;
