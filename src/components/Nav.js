@@ -15,17 +15,17 @@ const Nav = () => {
           G-WAGON
           <ul>
             <li onClick={() => navigate("/specification")}>제원</li>
-            <li>가격</li>
+            <li onClick={() => navigate("/Price")}>견적</li>
           </ul>
         </Item>
         <Item>
           MOHAVE
           <ul>
             <li>제원</li>
-            <li>가격</li>
+            <li>견적</li>
           </ul>
         </Item>
-        <li>FAQ</li>
+        <li onClick={() => navigate("/FAQ")}>FAQ</li>
       </ContentBox>
     </Container>
   );

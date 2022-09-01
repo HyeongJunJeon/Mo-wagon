@@ -80,5 +80,4 @@ const CarouselContaier = styled.div`
 
 const CarImage = styled.img`
   height: 300px;
-  border-radius: 5px;
 `;

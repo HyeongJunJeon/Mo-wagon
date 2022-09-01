@@ -71,8 +71,8 @@ const Main = () => {
         </HighlightText>
 
         <CardContainer>
-          {CONTACT_TAB.map((item) => (
-            <ContactCard>
+          {CONTACT_TAB.map((item, i) => (
+            <ContactCard key={i}>
               <CardText>{item}</CardText>
               <CardArrow>{">"}</CardArrow>
             </ContactCard>
@@ -155,7 +155,7 @@ const TitleText = styled.p`
 const HighlightCaption = styled.span`
   display: inline-block;
   margin-top: 50px;
-  border-bottom: 3px solid ${(props) => props.theme.border};
+  border-bottom: 3px solid ${({ theme }) => theme.border};
   font-size: 32px;
 `;
 
@@ -197,6 +197,6 @@ const CardArrow = styled.button`
   cursor: pointer;
 
   :hover {
-    color: ${(props) => props.theme.blue};
+    color: ${(theme) => theme.blue};
   }
 `;

@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "gwagon",
+    "name": "G-Class",
     "price": [
       {
         "id": 1,
@@ -43,7 +43,7 @@
   },
   {
     "id": 2,
-    "name": "mohave",
+    "name": "Mohave",
     "price": [
       {
         "id": 1,

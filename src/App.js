@@ -4,6 +4,8 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Main from "./pages/Main";
 import Specification from "./pages/Specification";
+import Price from "./pages/Price";
+import FAQ from "./pages/FAQ";
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/specification" element={<Specification />} />
+        <Route path="/Price" element={<Price />} />
+        <Route path="/FAQ" element={<FAQ />} />
       </Routes>
       <Footer />
     </BrowserRouter>
