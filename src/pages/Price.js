@@ -1,20 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import Estimate from "./component/Estimate";
 
 const Price = () => {
-  const [data, setData] = useState([]);
-  const [img, setImg] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:3000/data/Car.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data[0]);
-        setImg(data[0].image[2]);
-      });
-  }, []);
-
   return (
     <Container>
       <PriceTextBox>
@@ -22,7 +10,7 @@ const Price = () => {
         <EngText>Estimate</EngText>
       </PriceTextBox>
 
-      <Estimate data={data} img={img} />
+      <Estimate />
     </Container>
   );
 };

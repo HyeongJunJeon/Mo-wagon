@@ -1,19 +1,22 @@
 import React from "react";
 import styled from "styled-components";
 import EstimateInputBox from "./EstimateInputBox";
+import { useSelector } from "react-redux";
 
-const Estimate = ({ data, img }) => {
+const Estimate = () => {
+  let data = useSelector((state) => state.data[0]);
+
   return (
     <Container>
       <ImageBox>
         <CarName>{data.name}</CarName>
-        <Image src={img.image_url} alt="car" />
+        <Image src={data.image[2].image_url} alt="car" />
       </ImageBox>
 
       <EstimateBox>
         <EstimateText>금융 견적</EstimateText>
 
-        <EstimateInputBox data={data} />
+        <EstimateInputBox />
       </EstimateBox>
     </Container>
   );

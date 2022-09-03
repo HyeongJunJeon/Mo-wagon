@@ -1,22 +1,24 @@
 import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
+import { useDispatch } from "react-redux";
+import { changeStatus } from "../../store";
 
-const FaqBox = ({ data }) => {
-  const [content, setContent] = useState(false);
-  const [onOffBtn, setOnOffBtn] = useState(true);
-
-  const handleContent = () => {
-    setContent(!content);
-    setOnOffBtn(!onOffBtn);
-  };
+const FaqBox = ({ data, i }) => {
+  let dispatch = useDispatch();
 
   return (
     <FaqBoxContainer>
-      <FaqTitle on={content}>
+      <FaqTitle on={data.isShow}>
         Q. {data.title}
-        <Button onClick={handleContent}>{onOffBtn ? "열기" : "닫기"}</Button>
+        <Button
+          onClick={() => {
+            dispatch(changeStatus(data.id));
+          }}
+        >
+          {data.onOffBtn ? "열기" : "닫기"}
+        </Button>
       </FaqTitle>
-      <FaqContent on={content}>A. {data.content}</FaqContent>
+      <FaqContent on={data.isShow}>A. {data.content}</FaqContent>
     </FaqBoxContainer>
   );
 };

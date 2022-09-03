@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
+import { useSelector } from "react-redux";
 
-const EstimateInputBox = ({ data }) => {
+const EstimateInputBox = () => {
   const [selectedTrim, setSelectedTrim] = useState();
   const [price, setPrice] = useState();
   const [advancePayment, setAdvancePayment] = useState(20);
   const [month, setMonth] = useState(36);
+
+  let data = useSelector((state) => state.data[0]);
 
   const handleSelect = (e) => {
     setSelectedTrim(e.target.value);
@@ -20,16 +23,12 @@ const EstimateInputBox = ({ data }) => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:3000/data/Car.json")
-      .then((res) => res.json())
-      .then((data) => {
-        if (selectedTrim) {
-          setPrice(data[0].price[selectedTrim - 1].data);
-        } else {
-          setPrice(data[0].price[0].data);
-        }
-      });
-  }, [selectedTrim]);
+    if (selectedTrim) {
+      setPrice(data.price[selectedTrim - 1].data);
+    } else {
+      setPrice(data.price[0].data);
+    }
+  }, [data.price, selectedTrim]);
 
   let monthPay = (price - price * (advancePayment / 100)) / month;
 
@@ -60,7 +59,7 @@ const EstimateInputBox = ({ data }) => {
       <RightInput>
         <DataName>차량 모델</DataName>
         <Data onChange={handleSelect}>
-          {data.price?.map((item) => (
+          {data.price.map((item) => (
             <option key={item.id} value={item.id}>
               {item.name}
             </option>

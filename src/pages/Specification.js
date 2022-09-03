@@ -1,21 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import SpecCarousel from "./component/SpecCarousel";
 import SpecLayout from "./component/SpecLayout";
 
 const Specification = () => {
-  const [images, setImages] = useState([]);
-  const [specification, setSpecification] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:3000/data/Car.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setImages(data[0].image);
-        setSpecification(data[0].specification);
-      });
-  }, []);
-
   return (
     <Container>
       <SpecTextBox>
@@ -23,9 +11,9 @@ const Specification = () => {
         <EngText>Technical data</EngText>
       </SpecTextBox>
 
-      <SpecCarousel images={images} />
+      <SpecCarousel />
 
-      <SpecLayout specification={specification} />
+      <SpecLayout />
     </Container>
   );
 };

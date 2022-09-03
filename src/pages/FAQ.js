@@ -1,17 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import FaqBox from "./component/FaqBox";
+import { useSelector } from "react-redux";
 
 const FAQ = () => {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-    fetch("http://localhost:3000/data/Faq.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data);
-      });
-  }, []);
+  let data = useSelector((state) => state.faqData);
 
   return (
     <Container>
@@ -20,8 +13,8 @@ const FAQ = () => {
         <EngText>FAQ</EngText>
       </FaqTextBox>
 
-      {data.map((data) => (
-        <FaqBox data={data} key={data.id} />
+      {data.map((data, i) => (
+        <FaqBox data={data} key={data.id} i={i} />
       ))}
     </Container>
   );

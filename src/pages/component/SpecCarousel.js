@@ -3,8 +3,11 @@ import styled from "styled-components";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useSelector } from "react-redux";
 
-const SpecCarousel = ({ images }) => {
+const SpecCarousel = () => {
+  let ImageData = useSelector((state) => state.data[0].image);
+
   const settings = {
     infinite: true,
     speed: 1000,
@@ -25,7 +28,7 @@ const SpecCarousel = ({ images }) => {
   return (
     <CarouselContaier>
       <Slider {...settings}>
-        {images.map((data) => {
+        {ImageData.map((data) => {
           return (
             <CarImage
               src={data.image_url}

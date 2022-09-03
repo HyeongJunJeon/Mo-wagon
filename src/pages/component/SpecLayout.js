@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import { useSelector } from "react-redux";
 
-const SpecLayout = ({ specification }) => {
+const SpecLayout = () => {
+  let spectData = useSelector((state) => state.data[0].specification);
+
   return (
     <Table>
       <Thead>
@@ -10,7 +13,7 @@ const SpecLayout = ({ specification }) => {
       </Thead>
 
       <Tbody>
-        {specification.map((data) => (
+        {spectData.map((data) => (
           <Tr key={data.id}>
             <Td>{data.name}</Td>
             <Td>{data.data}</Td>

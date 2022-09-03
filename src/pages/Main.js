@@ -3,15 +3,10 @@ import styled, { keyframes } from "styled-components";
 import gwagon from "../img/main-gwagon.jpg";
 import mohave from "../img/main-mohave.jpg";
 import ReactPlayer from "react-player";
+import { useSelector } from "react-redux";
 
 const Main = () => {
-  const CONTACT_TAB = [
-    "시승 신청",
-    "메르세데스-벤츠 스토어",
-    "기아 자동차 스토어",
-    "온라인 서비스 예약",
-    "뉴스 및 이벤트",
-  ];
+  let contactTabData = useSelector((state) => state.contactTab);
 
   return (
     <Container>
@@ -71,7 +66,7 @@ const Main = () => {
         </HighlightText>
 
         <CardContainer>
-          {CONTACT_TAB.map((item, i) => (
+          {contactTabData.map((item, i) => (
             <ContactCard key={i}>
               <CardText>{item}</CardText>
               <CardArrow>{">"}</CardArrow>
