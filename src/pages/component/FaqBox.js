@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import styled, { keyframes } from "styled-components";
 import { useDispatch } from "react-redux";
 import { changeStatus } from "../../store";
 
-const FaqBox = ({ data, i }) => {
+const FaqBox = ({ data }) => {
   let dispatch = useDispatch();
 
   return (

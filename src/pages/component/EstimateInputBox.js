@@ -3,12 +3,11 @@ import styled from "styled-components";
 import { useSelector } from "react-redux";
 
 const EstimateInputBox = () => {
+  let data = useSelector((state) => state.data[0]);
   const [selectedTrim, setSelectedTrim] = useState();
   const [price, setPrice] = useState();
   const [advancePayment, setAdvancePayment] = useState(20);
   const [month, setMonth] = useState(36);
-
-  let data = useSelector((state) => state.data[0]);
 
   const handleSelect = (e) => {
     setSelectedTrim(e.target.value);

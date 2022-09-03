@@ -13,8 +13,8 @@ const FAQ = () => {
         <EngText>FAQ</EngText>
       </FaqTextBox>
 
-      {data.map((data, i) => (
-        <FaqBox data={data} key={data.id} i={i} />
+      {data.map((data) => (
+        <FaqBox data={data} key={data.id} />
       ))}
     </Container>
   );

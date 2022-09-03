@@ -125,10 +125,10 @@ let faqData = createSlice({
   ],
   reducers: {
     changeStatus(state, action) {
-      if (state[action.payload - 1].id === action.payload - 1) {
-        state[action.payload].isShow = !state[action.payload].isShow;
-        state[action.payload].onOffBtn = !state[action.payload].onOffBtn;
-      }
+      let data = state.find((item) => item.id === action.payload);
+
+      data.isShow = !data.isShow;
+      data.onOffBtn = !data.onOffBtn;
     },
   },
 });
