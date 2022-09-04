@@ -6,6 +6,7 @@ import Main from "./pages/Main";
 import Specification from "./pages/Specification";
 import Price from "./pages/Price";
 import FAQ from "./pages/FAQ";
+import TsNote from "./pages/TsNote";
 
 function App() {
   return (
@@ -13,9 +14,10 @@ function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/specification" element={<Specification />} />
+        <Route path="/Specification" element={<Specification />} />
         <Route path="/Price" element={<Price />} />
         <Route path="/FAQ" element={<FAQ />} />
+        <Route path="/Note" element={<TsNote />} />
       </Routes>
       <Footer />
     </BrowserRouter>
