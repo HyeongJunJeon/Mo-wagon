@@ -1,34 +1,15 @@
-let { student, age } = { student: true, age: 20 };
-let 오브젝트 = { student: true, age: 20 };
+let 숙제1: [string, number, ...boolean[]] = ["동서녹차", 4000, true];
 
-function 함수1({ student, age }: { student: boolean; age: number }) {
-  console.log(student, age);
-}
+function 함수(...a: [string, boolean, ...(number | string)[]]) {}
 
-함수1({ student: true, age: 20 });
-
-function 최댓값(...a: number[]): number {
-  let answer = 0;
-  a.forEach((i) => {
-    if (answer < i) {
-      answer = i;
+function 숙제2(...a: (string | number)[]) {
+  let result: [string[], number[]] = [[], []];
+  a.forEach((item) => {
+    if (typeof item === "string") {
+      result[0].push(item);
+    } else {
+      result[1].push(item);
     }
   });
-  return answer;
-}
-
-function 함수({
-  user,
-  comment,
-  admin,
-}: {
-  user: string;
-  comment: number[];
-  admin: boolean;
-}): void {
-  console.log(user, comment, admin);
-}
-
-function 숙제3([...a]: (string | number | boolean)[]) {
-  console.log(...a);
+  return result;
 }
